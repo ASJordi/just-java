@@ -1,31 +1,12 @@
-import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Coffee, Shield, Eye, Lock, Database } from "lucide-react"
+import { Shield, Eye, Lock, Database } from "lucide-react"
 
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <Link href="/">
-              <div className="flex items-center gap-2">
-                <Coffee className="h-8 w-8 text-primary" />
-                <h1 className="text-2xl font-bold">JustJava</h1>
-              </div>
-            </Link>
-          </div>
-          <nav className="flex gap-6">
-            <Link href="/" className="font-medium hover:text-primary">
-              Home
-            </Link>
-            <Link href="/categories" className="font-medium hover:text-primary">
-              Categorías
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-1 py-12">
         <div className="container mx-auto px-4">

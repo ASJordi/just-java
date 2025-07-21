@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Coffee, RefreshCw, Home, AlertTriangle } from "lucide-react"
 
@@ -21,26 +22,7 @@ export default function Error({
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <Link href="/">
-              <div className="flex items-center gap-2">
-                <Coffee className="h-8 w-8 text-primary" />
-                <h1 className="text-2xl font-bold">JustJava</h1>
-              </div>
-            </Link>
-          </div>
-          <nav className="flex gap-6">
-            <Link href="/" className="font-medium hover:text-primary">
-              Home
-            </Link>
-            <Link href="/categories" className="font-medium hover:text-primary">
-              Categorías
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-1 flex items-center justify-center py-12 bg-muted/30">
         <div className="container mx-auto px-4">

@@ -4,13 +4,11 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Coffee, Trophy, BarChart3, Code, Database, List, Settings, Shield, GitBranch, Menu } from "lucide-react"
-import { useState } from "react"
+import { Coffee, Trophy, BarChart3, Code, Database, List, Settings, Shield, GitBranch } from "lucide-react"
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   const javaTopics = [
     {
       name: "Strings",
@@ -90,64 +88,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center gap-2">
-              <Coffee className="h-6 w-6 sm:h-8 sm:w-8 text-primary" aria-hidden="true" />
-              <h1 className="text-xl sm:text-2xl font-bold">JustJava</h1>
-            </div>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex gap-6" role="navigation" aria-label="Navegación principal">
-              <Link href="/" className="font-medium hover:text-primary transition-colors">
-                Inicio
-              </Link>
-              <Link href="/categories" className="font-medium hover:text-primary transition-colors">
-                Categorías
-              </Link>
-            </nav>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2 rounded-md hover:bg-muted transition-colors"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-expanded={mobileMenuOpen}
-              aria-controls="mobile-menu"
-              aria-label="Abrir menú de navegación"
-            >
-              <Menu className="h-5 w-5" aria-hidden="true" />
-            </button>
-          </div>
-
-          {/* Mobile Navigation */}
-          {mobileMenuOpen && (
-            <nav
-              id="mobile-menu"
-              className="md:hidden pb-4 border-t mt-4 pt-4"
-              role="navigation"
-              aria-label="Navegación móvil"
-            >
-              <div className="flex flex-col gap-4">
-                <Link
-                  href="/"
-                  className="font-medium hover:text-primary transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Inicio
-                </Link>
-                <Link
-                  href="/categories"
-                  className="font-medium hover:text-primary transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Categorías
-                </Link>
-              </div>
-            </nav>
-          )}
-        </div>
-      </header>
+      <Header className="sticky top-0 z-50" />
 
       <main className="flex-1">
         {/* Hero Section - Full Viewport */}
