@@ -6,10 +6,10 @@ export function Footer() {
     <footer className="bg-muted/30 border-t py-8 sm:py-12" role="contentinfo">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Coffee className="h-5 w-5 sm:h-6 sm:w-6 text-primary" aria-hidden="true" />
             <span className="text-lg sm:text-xl font-bold">JustJava</span>
-          </div>
+          </Link>
           <nav
             className="flex flex-wrap justify-center gap-4 sm:gap-8"
             role="navigation"
