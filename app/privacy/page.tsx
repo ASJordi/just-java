@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Footer } from "@/components/footer"
 import { Coffee, Shield, Eye, Lock, Database } from "lucide-react"
 
 export default function PrivacyPage() {
@@ -270,38 +271,7 @@ export default function PrivacyPage() {
         </div>
       </main>
 
-      <footer className="bg-muted/30 border-t py-12">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center gap-2 mb-4 md:mb-0">
-              <Coffee className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold">JustJava</span>
-            </div>
-            <div className="flex gap-8">
-              <Link href="/about" className="text-muted-foreground hover:text-primary">
-                Acerca de
-              </Link>
-              <Link href="/privacy" className="text-muted-foreground hover:text-primary">
-                Privacidad
-              </Link>
-              <a href="mailto:dev@asjordi.dev" className="text-muted-foreground hover:text-primary">
-                Contacto
-              </a>
-            </div>
-          </div>
-          <div className="mt-8 text-center text-muted-foreground text-sm">
-            &copy; {new Date().getFullYear()} JustJava. Desarrollado con ☕ por{" "}
-            <a
-              href="https://asjordi.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline font-medium"
-            >
-              ASJordi
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

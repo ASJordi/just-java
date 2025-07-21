@@ -97,33 +97,51 @@ export default function GlobalError({
             </div>
           </main>
 
-          <footer className="bg-gray-50 border-t py-8">
-            <div className="container mx-auto px-4 text-center">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <Coffee className="h-6 w-6 text-orange-500" />
-                <span className="text-xl font-bold">JustJava</span>
-              </div>
-              <div className="flex gap-8">
-                <a href="/about" className="text-gray-500 hover:text-orange-500">
-                  Acerca de
-                </a>
-                <a href="/privacy" className="text-gray-500 hover:text-orange-500">
-                  Privacidad
-                </a>
-                <a href="mailto:dev@asjordi.dev" className="text-gray-500 hover:text-orange-500">
-                  Contacto
-                </a>
-              </div>
-              <div className="mt-8 text-center text-gray-500 text-sm">
-                &copy; {new Date().getFullYear()} JustJava. Desarrollado con ☕ por{" "}
-                <a
-                  href="https://asjordi.dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-orange-500 hover:underline font-medium"
+          {/* Footer inline para global-error */}
+          <footer className="bg-muted/30 border-t py-8 sm:py-12" role="contentinfo">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <Coffee className="h-5 w-5 sm:h-6 sm:w-6 text-primary" aria-hidden="true" />
+                  <span className="text-lg sm:text-xl font-bold">JustJava</span>
+                </div>
+                <nav
+                  className="flex flex-wrap justify-center gap-4 sm:gap-8"
+                  role="navigation"
+                  aria-label="Enlaces del pie de página"
                 >
-                  ASJordi
-                </a>
+                  <a
+                    href="/about"
+                    className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Acerca de
+                  </a>
+                  <a
+                    href="/privacy"
+                    className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Privacidad
+                  </a>
+                  <a
+                    href="mailto:dev@asjordi.dev"
+                    className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Contacto
+                  </a>
+                </nav>
+              </div>
+              <div className="mt-6 sm:mt-8 text-center text-muted-foreground text-xs sm:text-sm">
+                <p>
+                  &copy; {new Date().getFullYear()} JustJava. Desarrollado con ☕ por{" "}
+                  <a
+                    href="https://asjordi.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline font-medium"
+                  >
+                    ASJordi
+                  </a>
+                </p>
               </div>
             </div>
           </footer>

@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Footer } from "@/components/footer"
 import { Coffee, ArrowRight, Clock, BarChart3 } from "lucide-react"
 
 export default function NewQuizPage() {
@@ -193,32 +194,7 @@ export default function NewQuizPage() {
         </div>
       </main>
 
-      <footer className="bg-muted/30 border-t py-8">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex gap-8">
-            <Link href="/about" className="text-muted-foreground hover:text-primary">
-              Acerca de
-            </Link>
-            <Link href="/privacy" className="text-muted-foreground hover:text-primary">
-              Privacidad
-            </Link>
-            <a href="mailto:dev@asjordi.dev" className="text-muted-foreground hover:text-primary">
-              Contacto
-            </a>
-          </div>
-          <div className="mt-8 text-center text-muted-foreground text-sm">
-            &copy; {new Date().getFullYear()} JustJava. Desarrollado con ☕ por{" "}
-            <a
-              href="https://asjordi.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline font-medium"
-            >
-              ASJordi
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

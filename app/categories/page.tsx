@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Footer } from "@/components/footer"
 import {
   Coffee,
   Code,
@@ -211,36 +212,7 @@ export default function CategoriesPage() {
         </div>
       </main>
 
-      <footer className="bg-muted/30 border-t py-8">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Coffee className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">JustJava</span>
-          </div>
-          <div className="flex gap-8">
-            <Link href="/about" className="text-muted-foreground hover:text-primary">
-              Acerca de
-            </Link>
-            <Link href="/privacy" className="text-muted-foreground hover:text-primary">
-              Privacidad
-            </Link>
-            <a href="mailto:dev@asjordi.dev" className="text-muted-foreground hover:text-primary">
-              Contacto
-            </a>
-          </div>
-          <div className="mt-8 text-center text-muted-foreground text-sm">
-            &copy; {new Date().getFullYear()} JustJava. Desarrollado con ☕ por{" "}
-            <a
-              href="https://asjordi.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline font-medium"
-            >
-              ASJordi
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
