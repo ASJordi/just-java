@@ -205,7 +205,7 @@ export default function PlayQuizPage() {
                     </div>
                   </div>
                 </CardContent>
-                <CardFooter className="flex flex-col sm:flex-row gap-4">
+                <CardFooter className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button variant="outline" className="w-full sm:w-auto gap-2 bg-transparent" onClick={restartQuiz}>
                     <RotateCcw className="h-4 w-4" />
                     Nuevo Quiz
